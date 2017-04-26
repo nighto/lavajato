@@ -1,0 +1,69 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "COSTA GLOBAL CONSULTORIA",
+        "id": "001",
+        "people": [
+          {
+            "name": "Ariana Azevedo Costa Bachmann",
+            "birthDate": "1983-02-02",
+            "parents": [
+              "Paulo Roberto Costa",
+              "Marici da Silva Azevedo Costa"
+            ],
+            "cpf": "09866644723",
+            "address": "Rua João Cabral de Melo Neto, 350, Bl. 01- Barra da Tijuca, Rio de Janeiro"
+          },
+          {
+            "name": "Humberto Sampaio de Mesquita",
+            "birthDate": "1974-07-04",
+            "parents": [
+              "Arthur Eugenio Ferreira de Mesquita",
+              "Cintia Maria Baronto Sampaio de Mesquita"
+            ],
+            "cpf": "05257480751",
+            "rg": "01354036010",
+            "address": "Rua dos Jacarandás, 1000, Bloco 3, ap. Barra da Tijuca, Rio de Janeiro"
+          },
+          {
+            "name": "Paulo Roberto Costa",
+            "nacionality": "brazilian",
+            "civil_state": "married",
+            "birthDate": "1954-01-01",
+            "parents": [
+              "Paulo Bachmann Costa",
+              "Evolina Pereira da Silva Costa"
+            ],
+            "birthCity": "Monte Alegre",
+            "birthState": "PR",
+            "instructionLevel": "terceiro grau completo",
+            "profession": "engenheiro",
+            "rg": "1708889876/CREA/RJ",
+            "cpf": "30261287915",
+            "address": "Rua Ivando de Azambuja, casa 30, condomínio Rio Mar IX, Barra da Tijuca, Rio de Janeiro"
+          },
+          {
+            "name": "Shanni Azevedo Costa Bachmann",
+            "birthDate": "1981-08-13",
+            "parents": [
+              "Paulo Roberto Costa",
+              "Marici da Silva Azevedo Costa"
+            ],
+            "cpf": "09187866730",
+            "address": "Rua dos Jacarandás, 1000, Bloco 03, Apto 501 — Barra da Tijuca — Rio de Janeiro/RJ — CEP 22.776-050"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.358407616615295,
+          -22.98716280704497
+        ]
+      }
+    }
+  ]
+}
