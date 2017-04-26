@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "COSTA GLOBAL CONSULTORIA",
+        "place": "COSTA GLOBAL CONSULTORIA",
         "id": "001",
         "people": [
           {
@@ -30,8 +30,8 @@
           },
           {
             "name": "Paulo Roberto Costa",
-            "nacionality": "brazilian",
-            "civil_state": "married",
+            "nationality": "brazilian",
+            "maritalStatus": "married",
             "birthDate": "1954-01-01",
             "parents": [
               "Paulo Bachmann Costa",
