@@ -29,6 +29,7 @@ function pointPopup(layer){
     var popupText = '';
 
     popupText += '<h3>' + (+(obj.id)) + 'ª Denúncia</h3>';
+    popupText += '<p>Íntegra da denúncia: <strong><a href="raw/1aInstancia/pdf/' + obj.id + '.pdf" target="_blank">pdf</a></strong> | <strong><a href="raw/1aInstancia/txt/' + obj.id + '.txt" target="_blank">txt (OCR)</a></strong> | <strong><a href="https://github.com/nighto/lavajato/blob/master/raw/1aInstancia/markdown/' + obj.id + '.md" target="_blank">md (revisado)</a></strong></p>';
     popupText += '<p>Local: <strong>' + obj.place + '</strong></p>';
     popupText += '<p>Denunciados:<ul>';
     for(var person of obj.people){
