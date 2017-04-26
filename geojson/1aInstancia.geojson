@@ -4,6 +4,9 @@
     {
       "type": "Feature",
       "properties": {
+        "phase": 1,
+        "title": "Embaraço à investigação de organização criminosa por parentes de PAULO ROBERTO COSTA – Processo Penal nº 5025676-71.2014.404.7000, chave de acesso 751092683414",
+        "description": "Em 21 de abril de 2014, o Ministério Público Federal ofereceu denúncia em desfavor de PAULO ROBERTO COSTA, ARIANA AZEVEDO COSTA BACHMANN, HUMBERTO SAMPAIO DE MESQUITA, MARCIO LEWKOWICZ e SHANNI AZEVEDO COSTA BACHMANN por embaraçarem a investigação de crimes praticados por organização criminosa. Os acusados suprimiram papéis, documentos e valores da empresa Costa Global, durante o processamento de busca e apreensão executada no dia 17 de março de 2014.",
         "place": "COSTA GLOBAL CONSULTORIA",
         "id": "001",
         "people": [
