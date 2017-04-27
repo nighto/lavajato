@@ -5,10 +5,10 @@
       "type": "Feature",
       "properties": {
         "phase": 1,
-        "title": "Embaraço à investigação de organização criminosa por parentes de PAULO ROBERTO COSTA – Processo Penal nº 5025676-71.2014.404.7000, chave de acesso 751092683414",
-        "description": "Em 21 de abril de 2014, o Ministério Público Federal ofereceu denúncia em desfavor de PAULO ROBERTO COSTA, ARIANA AZEVEDO COSTA BACHMANN, HUMBERTO SAMPAIO DE MESQUITA, MARCIO LEWKOWICZ e SHANNI AZEVEDO COSTA BACHMANN por embaraçarem a investigação de crimes praticados por organização criminosa. Os acusados suprimiram papéis, documentos e valores da empresa Costa Global, durante o processamento de busca e apreensão executada no dia 17 de março de 2014.",
-        "place": "COSTA GLOBAL CONSULTORIA",
         "id": "001",
+        "title": "Embaraço à investigação de organização criminosa por parentes de PAULO ROBERTO COSTA – Processo Penal nº 5025676-71.2014.404.7000, chave de acesso 751092683414",
+        "description": "Em 21 de abril de 2014, o Ministério Público Federal ofereceu denúncia em desfavor de PAULO ROBERTO COSTA, ARIANA AZEVEDO COSTA BACHMANN, HUMBERTO SAMPAIO DE MESQUITA, MARCIO LEWKOWICZ e SHANNI AZEVEDO COSTA BACHMANN por embaraçarem a investigação de crimes praticados por organização criminosa.\nOs acusados suprimiram papéis, documentos e valores da empresa Costa Global, durante o processamento de busca e apreensão executada no dia 17 de março de 2014.",
+        "place": "COSTA GLOBAL CONSULTORIA",
         "people": [
           {
             "name": "Ariana Azevedo Costa Bachmann",
@@ -63,8 +63,42 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -43.358407616615295,
-          -22.98716280704497
+          -43.358407,
+          -22.987162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "phase": 1,
+        "id": "002",
+        "title": "Crimes financeiros de CARLOS ALEXANDRE DE SOUZA ROCHA, o \"Ceará\" – Processo Penal nº 5025695-77.2014.404.7000, chave de acesso 395793892214",
+        "description": "Em 22 de abril de 2014, o Ministério Público Federal ofereceu denúncia em desfavor de CARLOS ALEXANDRE DE SOUZA ROCHA, conhecido como Ceará, pela prática de crimes financeiros.\nO acusado teria operado diversas vezes no mercado paralelo de câmbio, formando verdadeira instituição financeira irregular. A dimensão econômica dos crimes é superior a R$ 5 milhões.\nHouve, nesse caso, suspensão condicional do processo (art. 89 da Lei 9.099/95), estando o réu submetido a período de prova.",
+        "people": [
+          {
+            "name": "Carlos Alexandre de Souza Rocha [\"Carlos Rocha (Ceará)\"]",
+            "alias": "Ceará",
+            "nationality": "brazilian",
+            "maritalStatus": "single",
+            "profession": "comerciante",
+            "cpf": "32547056453",
+            "rg": "5545312 (SC)",
+            "birthCity": "Recife",
+            "birthState": "PE",
+            "parents": [
+              "Aldredo da Rocha Machado",
+              "Otilia Augusta de Souza Rocha"
+            ],
+            "address": "Av. Atlântica, 1440, apt. 2201 ou 401, Centro, Balneário Camboriú-SC"
+          }
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.634422,
+          -26.982562
         ]
       }
     }

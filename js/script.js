@@ -30,12 +30,13 @@ function pointPopup(layer){
 
     popupText += '<h2>' + obj.phase + 'ª Fase - ' + (+(obj.id)) + 'ª Denúncia</h2>';
     popupText += '<h3>' + obj.title + '</h3>';
-    popupText += '<p>' + obj.description + '</p>';
+    popupText += '<p>' + obj.description.replace(/\n/g, '<br>') + '</p>';
     popupText += '<p>Íntegra da denúncia: <strong><a href="raw/1aInstancia/pdf/' + obj.id + '.pdf" target="_blank">pdf</a></strong> | <strong><a href="raw/1aInstancia/txt/' + obj.id + '.txt" target="_blank">txt (OCR)</a></strong> | <strong><a href="https://github.com/nighto/lavajato/blob/master/raw/1aInstancia/markdown/' + obj.id + '.md" target="_blank">md (revisado)</a></strong></p>';
-    popupText += '<p>Local: <strong>' + obj.place + '</strong></p>';
+    popupText += obj.place ? '<p>Local: <strong>' + obj.place + '</strong></p>' : '';
     popupText += '<p>Denunciados:<ul>';
     for(var person of obj.people){
         popupText += '<li><strong>' + person.name + '</strong>';
+        popupText += person.alias ? ' (vulgo <strong>' + person.alias + '</strong>)': '';
             popupText += '<ul>';
                 popupText += person.nationality      ? '<li>Nacionalidade: '      + translateNationality(person.nationality)     + '</li>' : '';
                 popupText += person.maritalStatus    ? '<li>Estado civil: '       + translateMaritalStatus(person.maritalStatus) + '</li>' : '';
@@ -78,8 +79,12 @@ function translateNationality(nationality){
 }
 
 function translateMaritalStatus(maritalStatus){
-    if(maritalStatus === 'married'){
-        return 'casado';
+    switch(maritalStatus){
+        case 'married':
+            return 'casado';   break;
+        case 'single':
+            return 'solteiro'; break;
+        default:
+            return '';
     }
-    return '';
 }
