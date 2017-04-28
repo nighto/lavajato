@@ -35,30 +35,29 @@ function pointPopup(layer){
     popupText += obj.place ? '<p>Local: <strong>' + obj.place + '</strong></p>' : '';
     popupText += '<p>Denunciados:<ul>';
     for(var person of obj.people){
-        popupText += '<li><strong>' + person.name + '</strong>';
+        var detalhes = '';
+        detalhes += person.nationality      ? 'Nacionalidade: '      + translateNationality(person.nationality)     + '\n' : '';
+        detalhes += person.maritalStatus    ? 'Estado civil: '       + translateMaritalStatus(person.maritalStatus) + '\n' : '';
+        detalhes += person.birthDate        ? 'Data de Nascimento: ' + formatDate(person.birthDate)                 + '\n' : '';
+        detalhes += person.parents          ? 'Pais: '               + person.parents.join(' e ')                   + '\n' : '';
+        if(person.birthCity){
+            detalhes += 'Natural de: ' + person.birthCity;
+            if(person.birthState){
+                detalhes += '/' + person.birthState;
+            }
+            detalhes += '\n';
+        }
+        detalhes += person.instructionLevel ? 'Grau de Instrução: '  + person.instructionLevel                      + '\n' : '';
+        detalhes += person.profession       ? 'Profissão: '          + person.profession                            + '\n' : '';
+        detalhes += person.cpf              ? 'CPF: '                + formatCPF(person.cpf)                        + '\n' : '';
+        detalhes += person.rg               ? 'RG: '                 + person.rg                                    + '\n' : '';
+        detalhes += person.address          ? 'Endereço: '           + person.address                               + '\n' : '';
+        popupText += '<li title="'+detalhes+'"><strong>' + person.name + '</strong>';
         popupText += person.alias ? ' (vulgo <strong>' + person.alias + '</strong>)': '';
-            popupText += '<ul>';
-                popupText += person.nationality      ? '<li>Nacionalidade: '      + translateNationality(person.nationality)     + '</li>' : '';
-                popupText += person.maritalStatus    ? '<li>Estado civil: '       + translateMaritalStatus(person.maritalStatus) + '</li>' : '';
-                popupText += person.birthDate        ? '<li>Data de Nascimento: ' + formatDate(person.birthDate)                 + '</li>' : '';
-                popupText += person.parents          ? '<li>Pais: '               + person.parents.join(' e ')                   + '</li>' : '';
-                if(person.birthCity){
-                    popupText += '<li>Natural de: ' + person.birthCity;
-                    if(person.birthState){
-                        popupText += '/' + person.birthState;
-                    }
-                    popupText += '</li>';
-                }
-                popupText += person.instructionLevel ? '<li>Grau de Instrução: '  + person.instructionLevel                      + '</li>' : '';
-                popupText += person.profession       ? '<li>Profissão: '          + person.profession                            + '</li>' : '';
-                popupText += person.cpf              ? '<li>CPF: '                + formatCPF(person.cpf)                        + '</li>' : '';
-                popupText += person.rg               ? '<li>RG: '                 + person.rg                                    + '</li>' : '';
-                popupText += person.address          ? '<li>Endereço: '           + person.address                               + '</li>' : '';
-            popupText += '</ul>';
         popupText += '</li>';
     }
     popupText += '</ul></p>';
-    //popupText += '<p><small>Clique no nome de um denunciado para expandir informações.</small></p>';
+    popupText += '<p><small>Deixe o mouse sobre o nome de um denunciado para exibir mais informações, como endereço, CPF etc.</small></p>';
     return popupText;
 }
 
