@@ -35,24 +35,27 @@ function pointPopup(layer){
     popupText += obj.place ? '<p>Local: <strong>' + obj.place + '</strong></p>' : '';
     popupText += '<p>Denunciados:<ul>';
     for(var person of obj.people){
-        var detalhes = '';
-        detalhes += person.nationality      ? 'Nacionalidade: '      + translateNationality(person.nationality)     + '\n' : '';
-        detalhes += person.maritalStatus    ? 'Estado civil: '       + translateMaritalStatus(person.maritalStatus) + '\n' : '';
-        detalhes += person.birthDate        ? 'Data de Nascimento: ' + formatDate(person.birthDate)                 + '\n' : '';
-        detalhes += person.parents          ? 'Pais: '               + person.parents.join(' e ')                   + '\n' : '';
+        // Extra information
+        var extraInformation = '';
+        extraInformation += person.nationality      ? 'Nacionalidade: '      + translateNationality(person.nationality)     + '\n' : '';
+        extraInformation += person.maritalStatus    ? 'Estado civil: '       + translateMaritalStatus(person.maritalStatus) + '\n' : '';
+        extraInformation += person.birthDate        ? 'Data de Nascimento: ' + formatDate(person.birthDate)                 + '\n' : '';
+        extraInformation += person.parents          ? 'Pais: '               + person.parents.join(' e ')                   + '\n' : '';
         if(person.birthCity){
-            detalhes += 'Natural de: ' + person.birthCity;
+            extraInformation += 'Natural de: ' + person.birthCity;
             if(person.birthState){
-                detalhes += '/' + person.birthState;
+                extraInformation += '/' + person.birthState;
             }
-            detalhes += '\n';
+            extraInformation += '\n';
         }
-        detalhes += person.instructionLevel ? 'Grau de Instrução: '  + person.instructionLevel                      + '\n' : '';
-        detalhes += person.profession       ? 'Profissão: '          + person.profession                            + '\n' : '';
-        detalhes += person.cpf              ? 'CPF: '                + formatCPF(person.cpf)                        + '\n' : '';
-        detalhes += person.rg               ? 'RG: '                 + person.rg                                    + '\n' : '';
-        detalhes += person.address          ? 'Endereço: '           + person.address                               + '\n' : '';
-        popupText += '<li title="'+detalhes+'"><strong>' + person.name + '</strong>';
+        extraInformation += person.instructionLevel ? 'Grau de Instrução: '  + person.instructionLevel                      + '\n' : '';
+        extraInformation += person.profession       ? 'Profissão: '          + person.profession                            + '\n' : '';
+        extraInformation += person.cpf              ? 'CPF: '                + formatCPF(person.cpf)                        + '\n' : '';
+        extraInformation += person.rg               ? 'RG: '                 + person.rg                                    + '\n' : '';
+        extraInformation += person.address          ? 'Endereço: '           + person.address                               + '\n' : '';
+
+        // Person item
+        popupText += '<li title="' + extraInformation + '"><strong>' + person.name + '</strong>';
         popupText += person.alias ? ' (vulgo <strong>' + person.alias + '</strong>)': '';
         popupText += '</li>';
     }
